@@ -36,7 +36,9 @@ public class AddToCartTest extends TestBase {
         driver.findElement(By.cssSelector(".ico-cart")).click();
 
 
-        Assert.assertTrue(isElementPresent(By.cssSelector(".cart .product-name")));
+        //Assert.assertTrue(isElementPresent(By.cssSelector(".cart .product-name")));
+        Assert.assertTrue(isElementPresent(By.xpath("//*[contains(text(), '" + productName + "')]")), "Product '" + productName + "' is not found in the cart");
+
     }
 
     @AfterMethod(enabled = false)

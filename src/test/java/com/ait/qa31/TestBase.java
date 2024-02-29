@@ -7,6 +7,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
+import java.util.NoSuchElementException;
 
 public class TestBase {
 
@@ -26,7 +27,9 @@ public class TestBase {
     }
 
     public boolean isElementPresent(By locator) {
-        return driver.findElements(locator).size()>0;
+       return driver.findElements(locator).size()>0;
     }
+
+
 }
 
